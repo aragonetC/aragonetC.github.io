@@ -1,4 +1,11 @@
 hellos
 
 <script>console.log(navigator.languages)</script>
+<script>
+var HID = require('node-hid');
+var devices = HID.devices();
+console.log("Devices: ", devices)
+</script>
 <script>console.log(navigator.usb.getDevices().then(device => console.log(device)))</script>
+
+<button onClick="navigator.usb.getDevices().then(device => console.log(device))">Get UsbDevices</button>
